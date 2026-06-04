@@ -37,7 +37,7 @@ AEM說明檔案涵蓋標準使用案例。 因此，不會記錄錯誤、錯誤�
 
 若對於改善AEM說明檔案有任何想法，歡迎以協助撰寫的方式提出。 但是，評論、問題和提取要求僅適用於&#x200B;*貢獻*。 而非為了用於解答您有關如何使用AEM、實作AEM專案或解決技術問題的目的。
 
-有關使用AEM或技術錯誤的任何問題，應透過[Experience Manager支援入口網站](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home)的正常支援流程回報，或在[Experience Manager社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)中討論。
+有關使用AEM或技術錯誤的任何問題，應透過[Experience Manager支援入口網站](https://experienceleague.adobe.com/zh-hant?support-solution=Experience+Manager#home)的正常支援流程回報，或在[Experience Manager社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=zh-Hant)中討論。
 
 ***AEM說明檔案協助撰寫並非Adobe客戶支援的替代品***，且這類協助撰寫若試圖解答支援相關問題，一律會遭到拒絕。
 

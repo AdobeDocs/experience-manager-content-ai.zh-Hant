@@ -47,7 +47,7 @@ AEM Content AI Services支援兩種驗證方法。 挑選符合您整合要求�
 
    >[!NOTE]
    >
-   >如果API卡因「需要授權」訊息而停用，您的AEM as a Cloud Service環境可能無法現代化。 請參閱[AEM as a Cloud Service環境現代化](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
+   >如果API卡因「需要授權」訊息而停用，您的AEM as a Cloud Service環境可能無法現代化。 請參閱[AEM as a Cloud Service環境現代化](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 在&#x200B;**[!UICONTROL 設定API]**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 伺服器對伺服器]**&#x200B;驗證。
 

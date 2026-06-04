@@ -23,7 +23,7 @@ ht-degree: 1%
 開始之前，請確定已符合下列條件：
 
 * 您有一個使用中的Cloud Manager計畫，其中包含至少一個AEM as a Cloud Service環境。
-* 您在Admin Console中擁有該程式的&#x200B;**[系統管理員](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。
+* 您在Admin Console中擁有該程式的&#x200B;**[系統管理員](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。
 * 已在&#x200B;**Adobe Admin Console**&#x200B;中布建環境產品設定檔，請參閱[設定Adobe Developer Console專案](setup-adc-project.md)。
 
 ## 步驟1 — 開啟Content AI Configuration標籤 {#open-tab}
