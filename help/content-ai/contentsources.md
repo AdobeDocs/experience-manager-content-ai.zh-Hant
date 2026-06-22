@@ -7,7 +7,7 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI、Content AI 來源、贏取、Cloud Manager、Adobe Developer Console
 source-git-commit: 86c0b8b910583701dc4bd42b61e082cc5429cee8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '928'
 ht-degree: 100%
 

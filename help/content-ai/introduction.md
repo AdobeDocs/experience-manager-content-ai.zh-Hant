@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI、概觀、內容來源、語意搜尋、贏取、Cloud Manager
 source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '713'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -71,4 +71,4 @@ API 和服務，可在品牌內容的背景中啟用語意智慧和生成式 AI�
 
 ## 了解 Content AI API  {#apis}
 
-探索 AEM Content AI 的功能廣度，這些 API 充分展示平台的潛力。 請參閱[Content AI API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)。
+探索 AEM Content AI 的功能廣度，這些 API 充分展示平台的潛力。 請參閱 [Content AI API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)。
