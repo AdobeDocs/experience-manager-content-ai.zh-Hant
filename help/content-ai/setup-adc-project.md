@@ -7,7 +7,7 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI， Adobe Developer Console，驗證，伺服器對伺服器，API 金鑰，存取權杖
 source-git-commit: 445aeafe64eb8a68d0770c1f1afb54d68e0b054f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '674'
 ht-degree: 100%
 
