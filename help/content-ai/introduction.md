@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI、概觀、內容來源、語意搜尋、贏取、Cloud Manager
-source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
-workflow-type: ht
-source-wordcount: '713'
-ht-degree: 100%
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+workflow-type: tm+mt
+source-wordcount: '716'
+ht-degree: 97%
 
 ---
 
@@ -67,7 +67,7 @@ API 和服務，可在品牌內容的背景中啟用語意智慧和生成式 AI�
 
 ### &#x200B;2. 控制您的 Content AI 來源 {#control}
 
-設定並管理您的 Content AI 來源，以啟用以 AI 為基礎的體驗，請參閱[控制您的內容來源](contentsources.md)。
+設定並管理您的Content AI來源，以啟用AI型體驗，請參閱[控制您的內容來源](contentsources.md)以取得詳細資訊。
 
 ## 了解 Content AI API  {#apis}
 
