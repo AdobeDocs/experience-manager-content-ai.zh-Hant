@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI、Content AI 來源、贏取、Cloud Manager、Adobe Developer Console
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 72%
+source-wordcount: '1276'
+ht-degree: 61%
 
 ---
 
@@ -96,11 +96,13 @@ ht-degree: 72%
 
    ![重新整理頻率下拉式選單，顯示可用的選項](../assets/content-ai-onboarding-step-5-1.png)
 
-1. 選取「**[!UICONTROL 建立來源]**」。
+1. 選取「**[!UICONTROL 建立來源]**」。 擷取會自動開始，而來源會移至&#x200B;**索引**。
 
-## 步驟 3 - 觸發贏取 {#trigger-acquisition}
+   ![內容來源清單顯示索引狀態](../assets/content-ai-onboarding-step-6.png)中新建立的來源
 
-建立來源之後，其狀態為&#x200B;**新增**。 執行初始贏取以開始建立索引。
+## 步驟3 — 重新執行贏取 {#trigger-acquisition}
+
+當您建立來源，然後按照&#x200B;**[!UICONTROL 重新整理頻率]**&#x200B;設定的排程自動執行贏取。 您也可以隨時手動觸發執行 — 例如，在發佈新內容後立即重新索引。
 
 1. 在來源清單中，選取來源旁的「**更多動作**  (...)」圖示，然後選取「**[!UICONTROL 觸發贏取]**」。
 
@@ -116,7 +118,7 @@ ht-degree: 72%
 
 | 狀態 | 含義 |
 | --- | --- |
-| **新增** | 來源已建立；尚未執行任何贏取。 |
+| **新增** | Source剛剛建立；自動贏取尚未開始。 此狀態是簡短的。 |
 | **建立索引** | 正在贏取；正在抓取內容並編製索引。 |
 | **可用** | 索引已完成；來源已準備好提供搜尋查詢。 |
 
@@ -130,15 +132,17 @@ ht-degree: 72%
 
 一旦來源狀態為&#x200B;**可用**，您就可以直接從 Cloud Manager 執行搜尋查詢，以確認內容已正確編製索引。
 
-1. 在來源清單中，選取來源旁的「**[!UICONTROL 搜尋]**」。
+1. 在來源清單中，選取來源旁的&#x200B;**搜尋** （放大鏡）圖示。
 
-   ![在可用來源上醒目提示「搜尋」按鈕的內容來源清單](../assets/content-ai-onboarding-step-13.png)
+   ![在可用來源上反白顯示搜尋圖示的內容來源清單](../assets/content-ai-onboarding-step-13.png)
 
 1. 在搜尋欄位中輸入查詢。 結果會顯示具有相符評分和內容類型的相符項目清單 (例如 **PAGE** 或 **PDF**)。 選取結果會在右側開啟預覽。
 
    ![搜尋面板包含查詢、比對結果和分數，以及排名最高的結果的預覽窗格](../assets/content-ai-onboarding-step-14.png)
 
 ## 修改或刪除來源 {#modify-source}
+
+### 修改來源 {#modify}
 
 在建立來源之後將其設定更新：
 
@@ -148,15 +152,19 @@ ht-degree: 72%
 
 1. 在「**[!UICONTROL 修改 Content AI 來源]**」對話框中，視需要更新&#x200B;**[!UICONTROL 說明]**、**[!UICONTROL 網站位址]**、**[!UICONTROL 排除 URL]** 或&#x200B;**[!UICONTROL 重新整理頻率]**。 **[!UICONTROL Content AI 設定名稱]**&#x200B;是唯讀的，無法變更。
 
-1. 選取「**[!UICONTROL 儲存]**」以套用變更，或選取對話框左下角的「**[!UICONTROL 刪除]**」以完全移除來源。
+   ![修改內容人工智慧Source對話方塊，反白顯示可編輯的欄位](../assets/content-ai-onboarding-step-12.png)
+
+1. 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以套用變更。 來源清單會更新，反映出您的變更。
+
+### 刪除來源 {#delete}
+
+1. 在來源清單中，選取來源旁的&#x200B;**更多動作** (...)圖示，然後選取&#x200B;**[!UICONTROL 刪除]**。
 
    >[!WARNING]
    >
    >刪除來源是永久操作。 該來源的所有索引內容都會移除，且無法再提供搜尋查詢。
 
-   ![修改 Content AI 來源對話框，醒目提示出可編輯的欄位，並在左下方反白顯示「刪除」按鈕](../assets/content-ai-onboarding-step-12.png)
-
-來源清單會更新，反映出您的變更。 如果您刪除了來源，就不會再出現在清單中。
+刪除後，來源不再出現在清單中。
 
 ## 後續步驟 {#next-steps}
 
