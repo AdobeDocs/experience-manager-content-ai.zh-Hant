@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI， Adobe Developer Console，驗證，伺服器對伺服器，API 金鑰，存取權杖
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 98%
 * 您擁有您的組織之 [Adobe Developer Console](https://developer.adobe.com/console/) 存取權。
 * 您在 **Adobe Admin Console** 的 AEM Content AI 服務產品設定檔中被新增為&#x200B;**開發人員**。 若沒有此角色，**[!UICONTROL AEM Content AI 服務]**  API 卡片會顯示為停用，且&#x200B;**[!UICONTROL 伺服器對伺服器]**&#x200B;驗證選項會隱藏。
 * 您知道要選取之產品設定檔的程式和環境編號 (例如 `AEM User - publish - Program 12345 - Environment 67890`)。
-* 您在 Admin Console 中擁有該程式的&#x200B;**[系統管理員](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。 此角色可讓您管理產品設定檔並將使用者指派給環境。
+* 您在 Admin Console 中擁有程式的&#x200B;**[系統管理員](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。此角色可讓您管理產品設定檔，並將使用者指派至環境。
 
 ## 選擇驗證方法 {#choose-auth}
 
