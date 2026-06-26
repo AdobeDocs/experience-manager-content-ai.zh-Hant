@@ -9,7 +9,7 @@ keywords: AEM Content AI、Content AI 來源、贏取、Cloud Manager、Adobe De
 source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
 source-wordcount: '1276'
-ht-degree: 61%
+ht-degree: 88%
 
 ---
 
@@ -23,42 +23,42 @@ ht-degree: 61%
 開始之前，請確定已符合下列條件：
 
 * 您有一個使用中的 Cloud Manager 程式，其中包含至少一個 AEM as a Cloud Service 環境。
-* 您的使用者已指派給目標環境的&#x200B;**AEM使用者**&#x200B;產品設定檔，讓使用者可檢視內容來源。
-* 您的使用者已指派給目標環境的&#x200B;**AEM管理員**&#x200B;產品設定檔，這可讓使用者建立和編輯內容來源。 僅存取Cloud Manager是不夠的 — 請參閱下方的[將使用者指派給AEM產品設定檔](#assign-product-profile)。
-* 已在&#x200B;**Adobe Admin Console**&#x200B;中布建環境產品設定檔。
+* 您的使用者已指派至目標環境的 **AEM 使用者**&#x200B;產品設定檔，這可讓使用者檢視內容來源。
+* 您的使用者已指派至目標環境的 **AEM 管理員**&#x200B;產品設定檔，這可讓使用者建立及編輯內容來源。 僅存取 Cloud Manager 是不夠的 - 請參閱下方的[將使用者指派至 AEM 產品設定檔](#assign-product-profile)。
+* 環境產品設定檔已在 **Adobe Admin Console** 中佈建。
 
-## 將使用者指派至AEM產品設定檔 {#assign-product-profile}
+## 將使用者指派至 AEM 產品設定檔 {#assign-product-profile}
 
-使用此程式可針對特定環境授與使用者[!DNL Adobe Experience Manager] as a Cloud Service的存取權。 指派符合使用者需求存取權的設定檔：
+使用此程序，授予使用者特定環境的 [!DNL Adobe Experience Manager] as a Cloud Service 存取權。 指派符合使用者所需存取權的設定檔：
 
-* **[!UICONTROL AEM使用者]** — 檢視內容來源。
-* **[!UICONTROL AEM管理員]** — 建立和編輯內容來源。
+* **[!UICONTROL AEM 使用者]** - 檢視內容來源。
+* **[!UICONTROL AEM 管理員]** - 建立及編輯內容來源。
 
 >[!NOTE]
 >
->使用者必須屬於AEM產品設定檔，例如&#x200B;**[!UICONTROL AEM使用者]**&#x200B;或&#x200B;**[!UICONTROL AEM管理員]**，才能存取AEM。 光是存取Cloud Manager是不夠的。
+>使用者必須屬於 AEM 產品設定檔 (例如 **[!UICONTROL AEM 使用者]**&#x200B;或 **[!UICONTROL AEM 管理員]**)，才能存取 AEM。 僅存取 Cloud Manager 是不夠的。
 
-若要指派這些設定檔，您必須是具有[!UICONTROL 業務負責人] Cloud Manager產品設定檔的系統管理員。 備妥使用者名稱和電子郵件地址。
+若要指派這些設定檔，您必須是擁有[!UICONTROL 企業所有者] Cloud Manager 產品設定檔的系統管理員。 備妥使用者名稱和電子郵件地址。
 
-1. 在[Cloud Manager](https://my.cloudmanager.adobe.com/)中，瀏覽至您的程式，並為目標環境選取&#x200B;**[!UICONTROL 管理存取權]**。 新索引標籤會針對該環境開啟[!DNL Adobe Admin Console]。
-1. 選取&#x200B;**發佈**&#x200B;層的&#x200B;**[!UICONTROL AEM使用者]**&#x200B;或&#x200B;**[!UICONTROL AEM管理員]**&#x200B;產品設定檔 — 例如`AEM Administrators - publish - Program 12345 - Environment 67890`。 Content AI會編制已發佈內容的索引，因此設定檔必須在發佈層級（而非作者）指派。
-1. 選取&#x200B;**[!UICONTROL 新增使用者]**。
-1. 輸入使用者名稱和電子郵件地址，然後儲存變更。 使用者會新增至產品設定檔。
+1. 在 [Cloud Manager](https://my.cloudmanager.adobe.com/) 中，導覽至您的程式，並針對目標環境選取「**[!UICONTROL 管理存取權]**」。 隨即會為該環境在新標籤中開啟 [!DNL Adobe Admin Console]。
+1. 選取&#x200B;**發佈**&#x200B;層的 **[!UICONTROL AEM 使用者]**&#x200B;或 **[!UICONTROL AEM 管理員]**&#x200B;產品設定檔 - 例如：`AEM Administrators - publish - Program 12345 - Environment 67890`。 Content AI 會編列已發佈內容的索引，因此設定檔必須在發佈層級 (而非作者層級) 指派。
+1. 選取「**[!UICONTROL 新增使用者]**」。
+1. 輸入使用者名稱和電子郵件地址，然後儲存變更。 使用者便會新增至產品設定檔。
 
-對使用者需要存取的每個環境（例如開發、預備或生產）重複這些步驟。
+針對使用者需要存取權的每個環境 (例如開發、中繼或生產) 重複這些步驟。
 
 >[!CAUTION]
 >
->請勿編輯或刪除名為&#x200B;**[!UICONTROL AEM管理員]**&#x200B;或&#x200B;**[!UICONTROL AEM使用者]**&#x200B;的預設產品設定檔。 重新命名&#x200B;**[!UICONTROL AEM管理員]**&#x200B;會移除指派給它的每個人的管理員許可權。
+>請勿編輯或刪除名為「**[!UICONTROL AEM 管理員]**」或「**[!UICONTROL AEM 使用者]**」的預設產品設定檔。 重新命名「**[!UICONTROL AEM 管理員]**」將會移除指派至該設定檔的每個人的管理員權限。
 
 ### 驗證指派 {#verify-assignment}
 
-驗證指派是否成功：
+若要驗證指派是否成功：
 
-1. 在[!DNL Admin Console]中，重新開啟您指派的產品設定檔。
-1. 確認使用者出現在成員清單中。
+1. 在 [!DNL Admin Console] 中，重新開啟您指派的產品設定檔。
+1. 確認使用者顯示在成員清單中。
 
-如果您要疑難排解存取或權杖問題，請確認使用者已直接新增至產品設定檔，而非僅透過群組。
+如果您正在對存取權或權杖問題進行疑難排解，請確認使用者已直接新增至產品設定檔，而非僅透過群組新增。
 
 ## 步驟 1 - 開啟「Content AI 設定」索引標籤 {#open-tab}
 
