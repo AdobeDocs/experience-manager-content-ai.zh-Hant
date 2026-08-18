@@ -125,7 +125,7 @@ AEM內容AI 搜尋是[!DNL AEM]核心元件，可讓訪客直接從頁面搜尋�
 * 至少已建立一個內容Source，且狀態為&#x200B;**可用**。
 * **AEM Content AI Client** OSGi設定(`ContentAIClientImpl`)已同時設定在作者和發佈上，具有有效的API認證和預設的內容Source。
 
-如需完整的安裝指南 — 讓作者可以使用元件、連線其使用者端程式庫，以及設定對話方塊 — 請參閱[核心元件檔案](https://www.adobe.com/go/aem_cmp_library)。
+如需完整的安裝指南 — 讓作者可以使用元件、連線其使用者端程式庫，以及設定對話方塊 — 請參閱[核心元件檔案](https://www.adobe.com/go/aem_cmp_library_tw)。
 
 ## 恭喜！ {#congratulations}
 
@@ -137,4 +137,4 @@ AEM內容AI 搜尋是[!DNL AEM]核心元件，可讓訪客直接從頁面搜尋�
 
 * [設定Adobe Developer Console專案](setup-adc-project.md) — 建立直接呼叫Content AI API所需的ADC專案和認證。
 * [Content AI API參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — 使用語意、產生式或混合式搜尋端點查詢您的索引內容。
-* [核心元件檔案](https://www.adobe.com/go/aem_cmp_library) — 深入瞭解Proxy元件和範本原則。
+* [核心元件檔案](https://www.adobe.com/go/aem_cmp_library_tw) — 深入瞭解Proxy元件和範本原則。
