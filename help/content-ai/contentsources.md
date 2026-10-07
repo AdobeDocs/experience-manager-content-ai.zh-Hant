@@ -52,10 +52,10 @@ ht-degree: 76%
 
 如需詳細資訊，請參閱：
 
-* [將團隊成員指派給Cloud Manager產品設定檔](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [將團隊成員指派給Cloud Manager產品設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [存取 Cloud Manager](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [AEM as a Cloud Service團隊和產品設定檔](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
-* [新增使用者和角色](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
+* [AEM as a Cloud Service團隊和產品設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [新增使用者和角色](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## 將使用者指派至 AEM 產品設定檔 {#assign-product-profile}
 
