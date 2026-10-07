@@ -6,13 +6,11 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI、Content AI 來源、贏取、Cloud Manager、Adobe Developer Console
-source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: ht
-source-wordcount: '1276'
-ht-degree: 100%
-
+source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+workflow-type: tm+mt
+source-wordcount: '1671'
+ht-degree: 76%
 ---
-
 
 # 設定及管理您的 Content AI 來源
 
@@ -23,9 +21,41 @@ ht-degree: 100%
 開始之前，請確定已符合下列條件：
 
 * 您有一個使用中的 Cloud Manager 程式，其中包含至少一個 AEM as a Cloud Service 環境。
+* 您有Cloud Manager產品設定檔，而且可以登入Cloud Manager — 請參閱下方的[存取Cloud Manager](#cloud-manager-access)。
 * 您的使用者已指派至目標環境的 **AEM 使用者**&#x200B;產品設定檔，這可讓使用者檢視內容來源。
 * 您的使用者已指派至目標環境的 **AEM 管理員**&#x200B;產品設定檔，這可讓使用者建立及編輯內容來源。 僅存取 Cloud Manager 是不夠的 - 請參閱下方的[將使用者指派至 AEM 產品設定檔](#assign-product-profile)。
 * 環境產品設定檔已在 **Adobe Admin Console** 中佈建。
+
+## 存取Cloud Manager {#cloud-manager-access}
+
+若要開啟&#x200B;**[!UICONTROL Content AI設定]**&#x200B;索引標籤，您必須擁有Cloud Manager UI的存取權。 您組織的[!DNL Adobe Admin Console]管理員（系統管理員或產品管理員）授予此存取權。
+
+1. 請連絡您的[[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/)系統管理員。 如果您尚未成為組織的成員，請要求管理員新增您的Adobe ID或電子郵件地址。
+1. 要求管理員為您指派組織的AEM as a Cloud Service程式的Cloud Manager產品設定檔：
+
+   | 產品設定檔 | 它允許 |
+   | --- | --- |
+   | **[!UICONTROL 業務負責人]** | 管理程式。 具有廣泛的Cloud Manager許可權，包括&#x200B;**[!UICONTROL 管理存取權]**。 |
+   | **[!UICONTROL 部署管理員]** | 管理環境、部署和管道。 |
+   | **[!UICONTROL 方案管理員]** | 管理團隊設定和方案監督。 |
+   | **[!UICONTROL 開發人員]** | 適用於程式碼和Git。 的Cloud Manager許可權有限。 |
+
+1. 若要開啟Cloud Manager，請在[Cloud Manager](https://my.cloudmanager.adobe.com/)登入或前往[[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**。 如果您的Adobe ID屬於多個組織，請選取正確的組織。
+
+>[!NOTE]
+>
+>Cloud Manager產品設定檔不提供內容來源的存取權。 您也需要環境的&#x200B;**[!UICONTROL AEM使用者]**&#x200B;或&#x200B;**[!UICONTROL AEM管理員]**&#x200B;產品設定檔 — 請參閱[將使用者指派給AEM產品設定檔](#assign-product-profile)。 僅具有預設Cloud Manager使用者角色的使用者可以開啟環境，但無法取得方案層級的存取權。
+
+如果您登入但看不到程式或&#x200B;**[!UICONTROL Content AI設定]**&#x200B;標籤，請要求您的管理員驗證您指派的產品設定檔。 同時確認您在登入時選取了正確的組織。 AEM Managed Services使用與AEM as a Cloud Service不同的[!DNL Admin Console]產品內容與設定。
+
+若要在初始上線期間建立程式，系統管理員必須先擁有&#x200B;**[!UICONTROL 企業所有者]**&#x200B;設定檔並登入Cloud Manager。
+
+如需詳細資訊，請參閱：
+
+* [將團隊成員指派給Cloud Manager產品設定檔](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [存取 Cloud Manager](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
+* [AEM as a Cloud Service團隊和產品設定檔](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [新增使用者和角色](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## 將使用者指派至 AEM 產品設定檔 {#assign-product-profile}
 
@@ -41,7 +71,9 @@ ht-degree: 100%
 若要指派這些設定檔，您必須是擁有[!UICONTROL 企業所有者] Cloud Manager 產品設定檔的系統管理員。 備妥使用者名稱和電子郵件地址。
 
 1. 在 [Cloud Manager](https://my.cloudmanager.adobe.com/) 中，導覽至您的程式，並針對目標環境選取「**[!UICONTROL 管理存取權]**」。 隨即會為該環境在新標籤中開啟 [!DNL Adobe Admin Console]。
-1. 選取&#x200B;**發佈**&#x200B;層的 **[!UICONTROL AEM 使用者]**&#x200B;或 **[!UICONTROL AEM 管理員]**&#x200B;產品設定檔 - 例如：`AEM Administrators - publish - Program 12345 - Environment 67890`。 Content AI 會編列已發佈內容的索引，因此設定檔必須在發佈層級 (而非作者層級) 指派。
+1. 為&#x200B;**作者**&#x200B;和&#x200B;**發佈**&#x200B;層級選取&#x200B;**[!UICONTROL AEM使用者]**&#x200B;或&#x200B;**[!UICONTROL AEM管理員]**&#x200B;產品設定檔 — 例如`AEM Administrators - author - Program 12345 - Environment 67890`和`AEM Administrators - publish - Program 12345 - Environment 67890`。
+   * **[!UICONTROL AEM使用者]** — 唯讀作業。
+   * **[!UICONTROL AEM管理員]** — 寫入作業，例如建立、編輯或移除內容來源，以及觸發贏取。
 1. 選取「**[!UICONTROL 新增使用者]**」。
 1. 輸入使用者名稱和電子郵件地址，然後儲存變更。 使用者便會新增至產品設定檔。
 
@@ -49,7 +81,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->請勿編輯或刪除名為「**[!UICONTROL AEM 管理員]**」或「**[!UICONTROL AEM 使用者]**」的預設產品設定檔。 重新命名「**[!UICONTROL AEM 管理員]**」將會移除指派至該設定檔的每個人的管理員權限。
+>請勿編輯或刪除名為「**[!UICONTROL AEM Administrators]**」或「**[!UICONTROL AEM Users]**」的預設產品設定檔。 重新命名「**[!UICONTROL AEM 管理員]**」將會移除指派至該設定檔的每個人的管理員權限。
 
 ### 驗證指派 {#verify-assignment}
 
@@ -62,7 +94,7 @@ ht-degree: 100%
 
 ## 步驟 1 - 開啟「Content AI 設定」索引標籤 {#open-tab}
 
-1. 登入 [Cloud Manager](https://my.cloudmanager.adobe.com/)  並選取您的程式。
+1. 登入 [Cloud Manager](https://my.cloudmanager.adobe.com/) 並選取您的程式。
 
    ![Cloud Manager 主頁顯示程式卡片](../assets/content-ai-onboarding-step-1.png)
 
@@ -86,7 +118,7 @@ ht-degree: 100%
 
    | 欄位 | 說明 |
    | --- | --- |
-   | **[!UICONTROL Content AI 設定]** | 此來源的唯一識別碼 (例如 `my-site-index`)。 建立後即無法變更。 |
+   | **[!UICONTROL Content AI 設定名稱]** | 此來源的唯一識別碼 (例如 `my-site-index`)。 建立後即無法變更。 |
    | **[!UICONTROL 說明]** | *(選擇性)* 內容來源的簡短說明。 |
    | **[!UICONTROL 網站位址]** | 要抓取之網站的根 URL (例如 `https://www.example.com/`)。 |
    | **[!UICONTROL 排除 URL]** | *(選擇性)* 抓取期間要略過的 URL 模式。 |
@@ -102,7 +134,7 @@ ht-degree: 100%
 
 ## 步驟 3 - 重新執行贏取 {#trigger-acquisition}
 
-贏取會在您建立來源時自動執行，然後依照「**[!UICONTROL 重新整理頻率]**」所設定的排程進行。您也可以隨時手動觸發執行；例如，在發佈新內容後立即重新編列索引。
+贏取會在您建立來源時自動執行，然後依照「**[!UICONTROL 重新整理頻率]**」所設定的排程進行。 您也可以隨時手動觸發執行；例如，在發佈新內容後立即重新編列索引。
 
 1. 在來源清單中，選取來源旁的「**更多動作**  (...)」圖示，然後選取「**[!UICONTROL 觸發贏取]**」。
 
@@ -118,9 +150,9 @@ ht-degree: 100%
 
 | 狀態 | 含義 |
 | --- | --- |
-| **新增** | 來源剛剛建立；自動贏取尚未開始。此狀態是短暫的。 |
+| **新增** | 來源剛剛建立；自動贏取尚未開始。 此狀態是短暫的。 |
 | **建立索引** | 正在贏取；正在抓取內容並編製索引。 |
-| **可用** | 索引已完成；來源已準備好提供搜尋查詢。 |
+| **可用** | 索引已完成；來源已準備好處理搜尋查詢。 |
 
 ![內容來源清單顯示索引狀態](../assets/content-ai-onboarding-step-9.png)
 
@@ -154,7 +186,7 @@ ht-degree: 100%
 
    ![「修改 Content AI 來源」對話框，其中可編輯欄位已醒目標示](../assets/content-ai-onboarding-step-12.png)
 
-1. 選取「**[!UICONTROL 儲存]**」以套用變更。來源清單便會更新以反映您的變更。
+1. 選取「**[!UICONTROL 儲存]**」以套用變更。 來源清單便會更新以反映您的變更。
 
 ### 刪除來源 {#delete}
 
@@ -162,7 +194,7 @@ ht-degree: 100%
 
    >[!WARNING]
    >
-   >刪除來源是永久操作。 該來源的所有索引內容都會移除，且無法再提供搜尋查詢。
+   >刪除來源是永久操作。 該來源的所有索引內容都會移除，且無法再回應搜尋查詢。
 
 刪除後，清單中將不再顯示該來源。
 
@@ -173,6 +205,6 @@ ht-degree: 100%
 
 ## 疑難排解 {#troubleshooting}
 
-* **來源會在[!UICONTROL 索引]中長時間保留。** 從 (...) 選單重試贏取。 如果狀態在第二次執行後未前進，請確認&#x200B;**[!UICONTROL 網站位址]**&#x200B;可公開存取，且&#x200B;**[!UICONTROL 排除 URL]** 模式不會篩選出每個頁面。
+* **來源會在[!UICONTROL 索引]中長時間保留。** 從 (…) 選單重試贏取。 如果狀態在第二次執行後未前進，請確認&#x200B;**[!UICONTROL 網站位址]**&#x200B;可公開存取，且&#x200B;**[!UICONTROL 排除 URL]** 模式不會篩除所有頁面。
 * **來源在執行後移回[!UICONTROL 新增]。** 爬蟲無法從設定的根 URL 擷取任何頁面。 確認 URL 以 `200 OK` 回應，且網站未封鎖自動要求。
 * **[!UICONTROL 搜尋]未傳回[!UICONTROL 可用]來源的結果。** 索引成功，但沒有符合查詢的內容。 請嘗試更廣泛的查詢，或檢查抓取的 URL 是否包含您期望的頁面。
