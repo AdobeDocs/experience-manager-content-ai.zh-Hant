@@ -5,14 +5,23 @@ topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-keywords: AEM Content AI， Adobe Developer Console，驗證，伺服器對伺服器，API 金鑰，存取權杖
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: ht
+keywords: AEM Content AI，Adobe Developer Console，驗證，伺服器對伺服器，API 金鑰，存取權杖
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
+workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 100%
-
 ---
-
 
 # 設定 Adobe Developer Console 專案 {#configure-adc-project}
 
@@ -27,7 +36,7 @@ ht-degree: 100%
 * 您擁有您的組織之 [Adobe Developer Console](https://developer.adobe.com/console/) 存取權。
 * 您在 **Adobe Admin Console** 的 AEM Content AI 服務產品設定檔中被新增為&#x200B;**開發人員**。 若沒有此角色，**[!UICONTROL AEM Content AI 服務]**  API 卡片會顯示為停用，且&#x200B;**[!UICONTROL 伺服器對伺服器]**&#x200B;驗證選項會隱藏。
 * 您知道要選取之產品設定檔的程式和環境編號 (例如 `AEM User - publish - Program 12345 - Environment 67890`)。
-* 您在 Admin Console 中擁有程式的&#x200B;**[系統管理員](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。此角色可讓您管理產品設定檔，並將使用者指派至環境。
+* 您在 Admin Console 中擁有程式的&#x200B;**[系統管理員](https://experienceleague.adobe.com/zh-hant/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。 此角色可讓您管理產品設定檔，並將使用者指派至環境。
 
 ## 選擇驗證方法 {#choose-auth}
 
@@ -48,7 +57,7 @@ AEM Content AI 服務支援兩種驗證方法。 挑選符合您整合要求的�
 
    >[!NOTE]
    >
-   >如果 API 卡片停用並出現「需要授權」訊息，您的 AEM as a Cloud Service 環境可能無法現代化。 請參閱 [AEM as a Cloud Service 環境的現代化](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
+   >如果 API 卡片停用並出現「需要授權」訊息，您的 AEM as a Cloud Service 環境可能尚未現代化。 請參閱 [AEM as a Cloud Service 環境的現代化](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 在「**[!UICONTROL 設定 API]**」對話框中，選取&#x200B;**[!UICONTROL 伺服器對伺服器]**&#x200B;驗證。
 
@@ -106,7 +115,7 @@ AEM Content AI 服務支援兩種驗證方法。 挑選符合您整合要求的�
 
    ![從連線的認證複製 API 金鑰](../assets/onboarding-api-key-04.png)
 
-1. 在每個 API 要求中納入金鑰：
+1. 在每個 API 請求中納入金鑰：
 
    ```http
    x-api-key: YOUR_API_KEY
