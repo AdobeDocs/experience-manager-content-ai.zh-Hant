@@ -20,7 +20,7 @@ level_v2:
 source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
 workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 76%
+ht-degree: 100%
 ---
 
 # 設定及管理您的 Content AI 來源
@@ -32,40 +32,40 @@ ht-degree: 76%
 開始之前，請確定已符合下列條件：
 
 * 您有一個使用中的 Cloud Manager 程式，其中包含至少一個 AEM as a Cloud Service 環境。
-* 您有Cloud Manager產品設定檔，而且可以登入Cloud Manager — 請參閱下方的[存取Cloud Manager](#cloud-manager-access)。
+* 您有 Cloud Manager 產品設定檔，而且可以登入 Cloud Manager - 請參閱下方的[取得 Cloud Manager 的存取權](#cloud-manager-access)。
 * 您的使用者已指派至目標環境的 **AEM 使用者**&#x200B;產品設定檔，這可讓使用者檢視內容來源。
 * 您的使用者已指派至目標環境的 **AEM 管理員**&#x200B;產品設定檔，這可讓使用者建立及編輯內容來源。 僅存取 Cloud Manager 是不夠的 - 請參閱下方的[將使用者指派至 AEM 產品設定檔](#assign-product-profile)。
 * 環境產品設定檔已在 **Adobe Admin Console** 中佈建。
 
-## 存取Cloud Manager {#cloud-manager-access}
+## 取得 Cloud Manager 的存取權 {#cloud-manager-access}
 
-若要開啟&#x200B;**[!UICONTROL Content AI設定]**&#x200B;索引標籤，您必須擁有Cloud Manager UI的存取權。 您組織的[!DNL Adobe Admin Console]管理員（系統管理員或產品管理員）授予此存取權。
+若要開啟 **[!UICONTROL Content AI 設定]**&#x200B;索引標籤，您需要 Cloud Manager UI 的存取權。 您組織的 [!DNL Adobe Admin Console] 管理員 (系統管理員或產品管理員) 會授予此存取權。
 
-1. 請連絡您的[[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/)系統管理員。 如果您尚未成為組織的成員，請要求管理員新增您的Adobe ID或電子郵件地址。
-1. 要求管理員為您指派組織的AEM as a Cloud Service程式的Cloud Manager產品設定檔：
+1. 請聯絡您的 [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/) 管理員。 如果您還不是組織的成員，請要求管理員新增您的 Adobe ID 或電子郵件地址。
+1. 請要求管理員為您指派組織的 AEM as a Cloud Service 程式的 Cloud Manager 產品設定檔：
 
-   | 產品設定檔 | 它允許 |
+   | 產品設定檔 | 允許的事項 |
    | --- | --- |
-   | **[!UICONTROL 業務負責人]** | 管理程式。 具有廣泛的Cloud Manager許可權，包括&#x200B;**[!UICONTROL 管理存取權]**。 |
+   | **[!UICONTROL 企業所有人]** | 管理程式。 具有廣泛的 Cloud Manager 權限，包括&#x200B;**[!UICONTROL 管理存取權]**。 |
    | **[!UICONTROL 部署管理員]** | 管理環境、部署和管道。 |
-   | **[!UICONTROL 方案管理員]** | 管理團隊設定和方案監督。 |
-   | **[!UICONTROL 開發人員]** | 適用於程式碼和Git。 的Cloud Manager許可權有限。 |
+   | **[!UICONTROL 方案管理員]** | 管理團隊設定和程式監督。 |
+   | **[!UICONTROL 開發人員]** | 處理程式碼和 Git。 具有有限的 Cloud Manager 權限。 |
 
-1. 若要開啟Cloud Manager，請在[Cloud Manager](https://my.cloudmanager.adobe.com/)登入或前往[[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**。 如果您的Adobe ID屬於多個組織，請選取正確的組織。
+1. 若要開啟 Cloud Manager，請在 [Cloud Manager](https://my.cloudmanager.adobe.com/) 登入，或前往 [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**。 如果您的 Adobe ID 屬於多個組織，請選取正確的組織。
 
 >[!NOTE]
 >
->Cloud Manager產品設定檔不提供內容來源的存取權。 您也需要環境的&#x200B;**[!UICONTROL AEM使用者]**&#x200B;或&#x200B;**[!UICONTROL AEM管理員]**&#x200B;產品設定檔 — 請參閱[將使用者指派給AEM產品設定檔](#assign-product-profile)。 僅具有預設Cloud Manager使用者角色的使用者可以開啟環境，但無法取得方案層級的存取權。
+>Cloud Manager 產品設定檔不提供內容來源的存取權。 您也需要環境的 **[!UICONTROL AEM 使用者]**&#x200B;或 **[!UICONTROL AEM 管理員]**&#x200B;產品設定檔 - 請參閱[將使用者指派至 AEM 產品設定檔](#assign-product-profile)。 只具有預設 Cloud Manager 使用者角色的使用者可以開啟環境，但無法取得程式層級的存取權。
 
-如果您登入但看不到程式或&#x200B;**[!UICONTROL Content AI設定]**&#x200B;標籤，請要求您的管理員驗證您指派的產品設定檔。 同時確認您在登入時選取了正確的組織。 AEM Managed Services使用與AEM as a Cloud Service不同的[!DNL Admin Console]產品內容與設定。
+如果您登入後看不到程式或 **[!UICONTROL Content AI 設定]**&#x200B;索引標籤，請要求管理員確認指派給您的產品設定檔。 也請確認您在登入時選取了正確的組織。 AEM Managed Services 使用與 AEM as a Cloud Service 不同的 [!DNL Admin Console] 產品情境和設定。
 
-若要在初始上線期間建立程式，系統管理員必須先擁有&#x200B;**[!UICONTROL 企業所有者]**&#x200B;設定檔並登入Cloud Manager。
+若要在初始上線期間建立程式，系統管理員必須先擁有&#x200B;**[!UICONTROL 業務負責人]**&#x200B;設定檔，並登入 Cloud Manager。
 
 如需詳細資訊，請參閱：
 
-* [將團隊成員指派給Cloud Manager產品設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [將團隊成員指派至 Cloud Manager 產品設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [存取 Cloud Manager](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [AEM as a Cloud Service團隊和產品設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [AEM as a Cloud Service 團隊和產品設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
 * [新增使用者和角色](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## 將使用者指派至 AEM 產品設定檔 {#assign-product-profile}
@@ -82,9 +82,9 @@ ht-degree: 76%
 若要指派這些設定檔，您必須是擁有[!UICONTROL 企業所有者] Cloud Manager 產品設定檔的系統管理員。 備妥使用者名稱和電子郵件地址。
 
 1. 在 [Cloud Manager](https://my.cloudmanager.adobe.com/) 中，導覽至您的程式，並針對目標環境選取「**[!UICONTROL 管理存取權]**」。 隨即會為該環境在新標籤中開啟 [!DNL Adobe Admin Console]。
-1. 為&#x200B;**作者**&#x200B;和&#x200B;**發佈**&#x200B;層級選取&#x200B;**[!UICONTROL AEM使用者]**&#x200B;或&#x200B;**[!UICONTROL AEM管理員]**&#x200B;產品設定檔 — 例如`AEM Administrators - author - Program 12345 - Environment 67890`和`AEM Administrators - publish - Program 12345 - Environment 67890`。
-   * **[!UICONTROL AEM使用者]** — 唯讀作業。
-   * **[!UICONTROL AEM管理員]** — 寫入作業，例如建立、編輯或移除內容來源，以及觸發贏取。
+1. 同時為&#x200B;**作者**&#x200B;層和&#x200B;**發佈**&#x200B;層選取 **[!UICONTROL AEM 使用者]**&#x200B;或 **[!UICONTROL AEM 管理員]**&#x200B;產品設定檔 - 例如 `AEM Administrators - author - Program 12345 - Environment 67890` 和 `AEM Administrators - publish - Program 12345 - Environment 67890`。
+   * **[!UICONTROL AEM 使用者]** - 唯讀作業。
+   * **[!UICONTROL AEM 管理員]** - 寫入作業，例如建立、編輯或移除內容來源，以及觸發贏取。
 1. 選取「**[!UICONTROL 新增使用者]**」。
 1. 輸入使用者名稱和電子郵件地址，然後儲存變更。 使用者便會新增至產品設定檔。
 
