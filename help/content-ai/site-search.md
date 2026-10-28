@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # 開始使用 AEM Content AI 搜尋
@@ -145,5 +145,5 @@ AEM Content AI 搜尋是 [!DNL AEM] 核心元件，讓訪客直接從頁面搜�
 ## 後續步驟 {#next-steps}
 
 * [設定 Adobe Developer Console 專案](setup-adc-project.md) — 建立直接呼叫 Content AI API 所需的 ADC 專案和認證。
-* [Content AI API 參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — 使用語意、生成式或混合式搜尋端點查詢已建立索引的內容。
+* [Content AI API 參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) — 使用語意、生成式或混合式搜尋端點查詢已建立索引的內容。
 * [核心元件文件](https://www.adobe.com/go/aem_cmp_library_tw) — 深入了解代理元件和範本原則。

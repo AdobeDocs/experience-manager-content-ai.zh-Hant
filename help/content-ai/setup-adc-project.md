@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # 設定 Adobe Developer Console 專案 {#configure-adc-project}
@@ -126,4 +126,4 @@ AEM Content AI 服務支援兩種驗證方法。 挑選符合您整合要求的�
 ## 後續步驟 {#next-steps}
 
 * [控制您的內容來源](contentsources.md)：在 Cloud Manager 中設定內容來源並觸發贏取。
-* [Content AI API 參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)  - 使用您的存取權杖或 API 金鑰來查詢已編製索引的內容。
+* [Content AI API 參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/)  - 使用您的存取權杖或 API 金鑰來查詢已編製索引的內容。

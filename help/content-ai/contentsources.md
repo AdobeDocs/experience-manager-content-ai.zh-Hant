@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # 設定及管理您的 Content AI 來源
@@ -212,7 +212,7 @@ ht-degree: 100%
 ## 後續步驟 {#next-steps}
 
 * [設定 Adobe Developer Console 專案](setup-adc-project.md)  - 建立呼叫 API 所需的 ADC 專案和認證。
-* [Content AI API 參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - 使用語意、全文或混合式搜尋端點查詢您的索引內容。
+* [Content AI API 參考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) - 使用語意、全文或混合式搜尋端點查詢您的索引內容。
 
 ## 疑難排解 {#troubleshooting}
 
